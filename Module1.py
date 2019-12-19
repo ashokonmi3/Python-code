@@ -5,7 +5,7 @@
 
 # mystuff = {'Subject': "Java!"}
 
-
+# a= " Ptyhon learning"
 
 # # moduleFunction()
 
@@ -15,7 +15,7 @@
 
 # # moduleFunction()
 
-# # mystuffList = ['Subject',"Java!","python"]
+# mystuffList = ['Subject',"Java!","python"]
 
 # def moduleExample():
 # 	print "I AM from module!"
@@ -59,7 +59,7 @@ else:
 	print (mystuff)
 
 # mystuffoutside = {'Subject': "Scala1!"}
-# print mystuffoutside
+# print (mystuffoutside)
 
 # TBD - how to make it available in both ways
 

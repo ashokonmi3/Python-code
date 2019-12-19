@@ -1,36 +1,21 @@
-# s = "If Comrade Napoleon says it, it must be right."
-# a = [100, 200, 300]
-# # 
-# def foo(arg):
-#     print(f'arg = {arg}')
+'''this is doc string for the module'''
+s = "If Comrade Napoleon says it, it must be right."
+a = [100, 200, 300]
 
-# class Foo:
-#     pass
+def foo(arg):
+    '''docstring'''
+    print(f'arg = {arg}')
 
-# def add(x,y):
-#    return x + y
+class Foo:
+    '''docstring'''
+    pass
 
-# When you run Python interactively the local __name__ variable is assigned a value of __main__. 
-# Likewise, when you execute a Python module from the command line, rather than importing it into another module,
-# its __name__ attribute is assigned a value of __main__, rather than the actual name of the module.
-#  In this way, modules can look at their own __name__ value to determine for themselves how they are being used, 
-# whether as support for another program or as the main application executed from the command line. 
+# When a .py file is imported as a module, Python sets the special dunder variable __name__ to the name of the module. However, if a file is run as a standalone script, __name__ is (creatively) set to the string '__main__'. Using this fact, you can discern which is the case at run-time and alter behavior accordingly:
 
-# if __name__ == "main": is used to execute some code only if the file was run directly, and not imported.
-if __name__ == "__main__":
-	print("Module.py is being run directly")
-	def apple():
-		print ("I AM APPLES!")
-	mystuff = {'Subject': "Java!"}
-	print (mystuff['Subject'])
-	stringModule = "This is inside Module.py"
-	print (stringModule)
-	print ("success")
-
-else:
-	print("Module.py is being imported into another module")
-# 	def sqr(n):
-# 		print ("success")
-# 		return n+1
-	mystuff1 = {'Subject': "Scala!"}
-	print (mystuff1)
+if (__name__ == '__main__'):
+    print('Executing as standalone script')
+    print(s)
+    print(a)
+    foo('quux')
+    x = Foo()
+    print(x)
