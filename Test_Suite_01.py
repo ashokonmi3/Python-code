@@ -1,21 +1,21 @@
 import unittest
 
-class PythonOrgSearch(unittest.TestCase):
+class LoadTest(unittest.TestCase):
     
     def setUp(self):
-        print("setup from PythonOrgsearch")
+        print("setup from Load test")
 
     
     def test_01_search_in_python_org(self):
-        print("Test Case : test_01_search_in_python_org")
+        print("Load Test Case : test_01_search_in_python_org")
 
     
     def test_02_search_by_name(self):
-        print("Test Case : test_02_search_by_name")
+        print("Load Test Case : test_02_search_by_name")
 
      
     def tear_down(self):
-        print("TEAR DOWN from PythonOrgsearch")
+        print("TEAR DOWN from Load test case")
 
 
 
