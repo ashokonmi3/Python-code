@@ -34,7 +34,7 @@ CRITICAL
 # filemode: If filename is given, the file is opened in this mode. The default is a, which means append.
 # format: This is the format of the log message.
 # default mode for file is append mode
-
+#
 # import logging
 # logging.basicConfig(filename="test.log", level=logging.DEBUG)
 # logging.warning("warning message")
@@ -150,28 +150,28 @@ CRITICAL
 # which is the name Python assigns to the module where execution starts.
 # If this file is imported by some other module, then the __name__ variable would correspond to its name
 #
-import logging
-
-logger = logging.getLogger('simple_example')
-logger.setLevel(logging.DEBUG)
-# create file handler which logs even debug messages
-fh = logging.FileHandler('spam.log')
-fh.setLevel(logging.DEBUG)
-# create console handler with a higher log level
-ch = logging.StreamHandler()
-ch.setLevel(logging.ERROR)
-# create formatter and add it to the handlers
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-ch.setFormatter(formatter)
-fh.setFormatter(formatter)
-# add the handlers to logger
-logger.addHandler(ch)
-logger.addHandler(fh)
-
-# 'application' code
-logger.debug('debug message')
-logger.info('info message')
-logger.warning('warn message')
-logger.error('error message')
-logger.critical('critical message')
+# import logging
+#
+# logger = logging.getLogger('simple_example')
+# logger.setLevel(logging.DEBUG)
+# # create file handler which logs even debug messages
+# fh = logging.FileHandler('spam.log')
+# fh.setLevel(logging.DEBUG)
+# # create console handler with a higher log level
+# ch = logging.StreamHandler()
+# ch.setLevel(logging.ERROR)
+# # create formatter and add it to the handlers
+# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# ch.setFormatter(formatter)
+# fh.setFormatter(formatter)
+# # add the handlers to logger
+# logger.addHandler(ch)
+# logger.addHandler(fh)
+#
+# # 'application' code
+# logger.debug('debug message')
+# logger.info('info message')
+# logger.warning('warn message')
+# logger.error('error message')
+# logger.critical('critical message')
 

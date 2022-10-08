@@ -27,13 +27,17 @@ import sys
 #       self.assertIn(3,[1,2,3])
 #    def test6(self):
 #       self.assertNotIn(3, range(5))
+#    def test7(self):
+#       self.assertEqual('10',10)
+#    def test8(self):
+#       self.assertEqual(10, 10)
 #
 # if __name__ == '__main__':
 #    unittest.main()
 # =========================
-# import math
-# import re
-#
+import math
+import re
+
 # class SimpleTest(unittest.TestCase):
 #    def test1(self):
 #       self.assertAlmostEqual(22.0/7,3.14)
@@ -42,10 +46,10 @@ import sys
 #    def test3(self):
 #       self.assertGreater(math.pi,3)
 #    def test4(self):
-#       self.assertNotRegexpMatches("Tutorials Point (I) Private Limited","Point")
-#
-# if __name__ == '__main__':
-#    unittest.main()
+#       self.assertNotRegex("Tutorials Point (I) Private Limited","Point")
+# #
+# if __name__ == '__main__':   unittest.main()
+
 # ======================
 # class SimpleTest(unittest.TestCase):
 #    def test1(self):
@@ -59,7 +63,6 @@ import sys
 #    unittest.main()
    # =================
 # class TestStringMethods(unittest.TestCase):
-#
 #     def test_upper(self):
 #         self.assertEqual('foo'.upper(), 'FOO')
 #
@@ -96,7 +99,7 @@ import sys
 # class DefaultWidgetSizeTestCase(unittest.TestCase):
 #     def test_default_widget_size(self):
 #         widget = Widget('The widget')
-#         self.assertEqual(widget.size(), (500, 50))
+#         self.assertEqual(widget.size(), (50, 50))
 # #
 # if __name__ == '__main__':
 #     unittest.main()
@@ -112,13 +115,14 @@ import sys
 #         return self.dim
 #     def resize(self,d1,d2):
 #         self.dim=(d1,d2)
+
 # class WidgetTestCase(unittest.TestCase):
 #     def setUp(self):
-#         print("Test setup")
+#         print("setUP: Test setup")
 #         self.widget = Widget('The widget')
 #
 #     def tearDown(self):
-#         print("Test completed")
+#         print("Teardown:Test completed")
 #
 #     def test_default_widget_size(self):
 #         print("Test case : test_default_widget_size")
@@ -162,7 +166,10 @@ import sys
 #         self.assertEqual(self.widget.name, "The widget",
 #                          'wrong size after resize')
 #
-#
+#     def tearDown(self):
+#         print("Teardown:Test completed")
+# #
+# #
 # def suite():
 #     suite = unittest.TestSuite()
 #     suite.addTest(WidgetTestCase('test_default_widget_size'))
@@ -193,8 +200,8 @@ import sys
 #     @unittest.skipUnless(sys.platform.startswith("win"), "requires Windows")
 #     def test_windows_support(self):
 #         print("windows specific testing code")
-#
-#
+# #
+# #
 #     def test_maybe_skipped(self):
 #         if not external_resource_available():
 #             self.skipTest("external resource not available")
@@ -207,7 +214,7 @@ import sys
 # # python -m  unittest -v unittest_example.py
 # ================================
 # Classes can be skipped just like methods:
-#
+# # #
 # @unittest.skip("showing class skipping")
 # class MySkippedTestCase(unittest.TestCase):
 #     def test_not_run(self):
@@ -216,17 +223,34 @@ import sys
 #     unittest.main()
 # ====================
 # Expected failures use the expectedFailure() decorator.
-
+#
 # class ExpectedFailureTestCase(unittest.TestCase):
 #     @unittest.expectedFailure
 #     def test_fail(self):
-#         self.assertEqual(1, 0, "broken")
+#         self.assertEqual(2, 1, "broken")
 # if __name__ == '__main__':
 #     unittest.main()
+
+#===========================
+# #
+# class ExpectedFailureTestCase(unittest.TestCase):
+#     @unittest.expectedFailure
+#     def test_fail(self):
+#         self.assertEqual(1, 1, "broken") #u
+# if __name__ == '__main__':
+#     unittest.main()
+# ================
+# class ExpectedFailureTestCase(unittest.TestCase):
+#     @unittest.expectedFailure
+#     def test_fail(self):
+#         self.assertEqual(2, 1, "broken") # x
+# if __name__ == '__main__':
+#     unittest.main()
+
 # ========================
 # unittest allows you to distinguish them inside the body of a test method using
 # the subTest() context manager.
-#
+
 # class NumbersTest(unittest.TestCase):
 #
 #     def test_even(self):
@@ -251,9 +275,9 @@ import sys
 #             with self.subTest(i=i):
 #                 print(i)
 #                 self.assertEqual(i % 2, 0)
-# #
-# # # Without using a subtest, execution would stop after the first failure,
-# # and the error would be less easy to diagnose because the value of i wouldn’t be displayed:
+# # #
+# # # # Without using a subtest, execution would stop after the first failure,
+# # # and the error would be less easy to diagnose because the value of i wouldn’t be displayed:
 # if __name__ == '__main__':
 #     unittest.main()
 

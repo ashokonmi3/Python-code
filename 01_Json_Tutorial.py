@@ -5,16 +5,16 @@ import json
 # #
 # # JSON string
 # employee = '{"id":"09", "name": "Nitin", "department":"Finance"}'
-# #
-# # Convert string to Python dict
+#
+# Convert string to Python dict
 # employee_dict = json.loads(employee)
 # print(employee_dict)
 # print(type(employee_dict))
 # print("\n")
 # print(employee_dict["id"])
 # print(employee_dict["name"])
-# #send dump
-# # # Convert Python dict to JSON
+# # #send dump
+# # # # Convert Python dict to JSON
 # json_object = json.dumps(employee_dict, indent=4)
 # print(json_object)
 # print(type(json_object))
@@ -39,7 +39,7 @@ import json
 # Python program showing that
 # json support different primitive
 # types
-#
+# #
 # import json
 #
 # # list conversion to Array
@@ -63,7 +63,7 @@ import json
 #
 # # None value to null
 # print(json.dumps(None))
-#
+# #
 # # Python object	       JSON object
 # # dict	               object
 # # list, tuple	           array
@@ -84,8 +84,8 @@ import json
 # # Serializing json
 # json_object = json.dumps(dictionary, indent=4)
 # print(json_object)
-
-# =======================
+#
+# # =======================
 '''dump function turns it to json and then streams it on into a file, 
 meanwhile dumps turns it into str.
 '''
@@ -137,9 +137,9 @@ meanwhile dumps turns it into str.
 # Python program to update
 # JSON
 #
-# import json
-#
-# # JSON data:
+import json
+
+# JSON data:
 x = '{ "organization":"GeeksForGeeks","city": "Noida","country": "India"}'
 
 # python object to be appended
